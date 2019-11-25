@@ -34,6 +34,7 @@ export class SchoolThumbnailComponent{
     // public component (of any type) will be passed in from another component
     @Input() school:any
 
+    // If a school if in Qatar, sets the font to bold and color to black
     getSchoolCountry() {
         const isForeignSchool = this.school && this.school.location.country === 'Qatar'
         return {black: isForeignSchool, bold: isForeignSchool}
