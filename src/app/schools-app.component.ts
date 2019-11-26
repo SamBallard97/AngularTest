@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'schools-app',
   template: `
       <navbar></navbar>
-      <school-list></school-list>
+      <router-outlet></router-outlet>
       `
 })
 

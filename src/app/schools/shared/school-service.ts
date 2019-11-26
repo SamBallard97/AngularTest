@@ -5,6 +5,10 @@ export class SchoolService{
     getSchools(){
         return SCHOOLS
     }
+
+    getSchool(id:number){
+        return SCHOOLS.find(school => school.id === id)
+    }
 }
 
 const SCHOOLS = [{
