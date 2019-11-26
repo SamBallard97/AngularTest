@@ -4,7 +4,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core'
 @Component({
     selector: 'school-thumbnail',
     template: `
-    <div class="well hoverwell thumbnail">
+    <div [routerLink]="['/schools', school.id]" class="well hoverwell thumbnail">
         <h2>{{school.name}}</h2>
         <div>Population: {{school.population}}</div>
         <div>Number of Staff: {{school.staffCount}}</div>

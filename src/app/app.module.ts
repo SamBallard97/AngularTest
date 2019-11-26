@@ -9,6 +9,7 @@ import { SchoolService } from './schools/shared/school-service'
 import { ToastrService } from './common/toastr.service';
 import { SchoolDetailsComponent } from './schools/school-details/school-details.component'
 import { appRoutes } from './routes'
+import { CreateSchoolComponent } from './schools/create-school.component'
 
 @NgModule({
   imports: [
@@ -20,6 +21,7 @@ import { appRoutes } from './routes'
     SchoolListComponent,
     SchoolThumbnailComponent,
     SchoolDetailsComponent,
+    CreateSchoolComponent,
     NavBarComponent
   ],
   providers: [ SchoolService, ToastrService ],
