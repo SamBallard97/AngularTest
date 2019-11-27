@@ -16,6 +16,7 @@ import { Router } from '@angular/router'
 })
 
 export class CreateSchoolComponent{
+    isDirty:boolean = true;
     constructor(private router: Router){
         
     }

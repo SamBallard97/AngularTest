@@ -1,9 +1,13 @@
 import { Injectable } from '@angular/core'
+import { Subject } from 'rxjs'
 
 @Injectable()
 export class SchoolService{
     getSchools(){
-        return SCHOOLS
+        // Making the data arrive over time. Subject is a type of observable and we are adding data to the steam
+        let subject = new Subject()
+        setTimeout(() => {subject.next(SCHOOLS); subject.complete(); }, 100)
+        return subject
     }
 
     getSchool(id:number){
