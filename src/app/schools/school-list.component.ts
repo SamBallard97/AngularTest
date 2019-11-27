@@ -1,6 +1,7 @@
 import { Component } from '@angular/core'
 import { SchoolService } from './shared/school-service'
 import { ToastrService } from '../common/toastr.service'
+import { ActivatedRoute } from '@angular/router'
 
 declare let toastr
 
@@ -20,9 +21,13 @@ declare let toastr
 
 
 export class SchoolListComponent {
-    schools:any[]
-    constructor(private schoolService: SchoolService, private toastr:ToastrService){
-        this.schools = this.schoolService.getSchools()
+    schools:any
+    constructor(private schoolService: SchoolService, private toastr:ToastrService, private route:ActivatedRoute){
+    }
+
+    ngOnInit(){
+        // Linked to the route
+        this.schools = this.route.snapshot.data['school']
     }
 
     handleThumbnailClick(schoolName){
