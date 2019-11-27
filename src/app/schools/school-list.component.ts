@@ -27,7 +27,7 @@ export class SchoolListComponent {
 
     ngOnInit(){
         // Linked to the route
-        this.schools = this.route.snapshot.data['school']
+        this.schools = this.route.snapshot.data['schools']
     }
 
     handleThumbnailClick(schoolName){

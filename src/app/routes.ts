@@ -1,10 +1,15 @@
-import { SchoolListComponent } from './schools/school-list.component';
-import { SchoolDetailsComponent } from './schools/school-details/school-details.component';
-import { Routes } from '@angular/router'
-import { CreateSchoolComponent } from './schools/create-school.component';
 import { Error404Component } from './errors/404.component';
-import { SchoolRouteActivator } from './schools/school-details/school-route-activator.service';
-import { SchoolListResolver } from './schools/school-list-resolver.service';
+import { Routes } from '@angular/router'
+
+import {
+    SchoolListComponent,
+    SchoolDetailsComponent,
+    CreateSchoolComponent,
+    SchoolRouteActivator,
+    SchoolListResolver
+} from './schools/index'
+
+
 
 export const appRoutes:Routes = [
     { path: 'schools/new', component: CreateSchoolComponent, canDeactivate: ['canDeactivateCreateEvent']},
@@ -14,6 +19,7 @@ export const appRoutes:Routes = [
     // error route 
     { path: '404', component: Error404Component },
     // now a default root path
-    { path: '', redirectTo: '/schools', pathMatch: 'full'}
+    { path: '', redirectTo: '/schools', pathMatch: 'full'},
+    { path: 'user', loadChildren: './user/user.module#UserModule' }
 
 ]

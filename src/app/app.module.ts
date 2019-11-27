@@ -1,6 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule } from '@angular/router'
+import { RouterModule, ActivatedRouteSnapshot } from '@angular/router'
+
+import {
+
+} from './schools/index'
+
 import { SchoolsAppComponent } from './schools-app.component';
 import { SchoolListComponent } from './schools/school-list.component';
 import { SchoolThumbnailComponent } from './schools/school-thumbnail.component';
